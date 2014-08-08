@@ -82,16 +82,16 @@ def execute(source):
 
     while i < l:
         s = words[i]
-        if s == 'Ook. Ook.':  # Go to the next cell
+        if s == 'Ook. Ook?':  # Go to the next cell
             x += 1
-        elif s == 'Ook! Ook!':  # Go to the previous cell
+        elif s == 'Ook? Ook.':  # Go to the previous cell
             x -= 1
-        elif s == 'Ook. Ook?':  # Increasing the value of the current cell on 1
+        elif s == 'Ook. Ook.':  # Increasing the value of the current cell on 1
             ook[x] += 1
-        elif s == 'Ook? Ook.':  # Decrease the value of the current cell on 1
+        elif s == 'Ook! Ook!':  # Decrease the value of the current cell on 1
             ook[x] -= 1
         elif s == 'Ook! Ook.':  # Printing the value of the current cell
-            print(chr(ook[x]), end='')  # TODO: ook[x] sometimes equal to -1 (examples/helloworld_1.Ook!)
+            print(chr(ook[x]), end='')
         elif s == 'Ook. Ook!':  # Enter a value in the current cell
             ook[x] = int(input("Input = "))
         elif s == 'Ook! Ook?':  # Begin loop
